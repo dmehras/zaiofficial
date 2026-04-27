@@ -555,7 +555,7 @@ image: 'images/miya-modena.jpg'
 const grid = document.getElementById('heroGrid');
 heroes.forEach((hero, i) => {
   const card = document.createElement('div');
-  card.className = 'hero-card rounded-2xl overflow-hidden';
+  card.className = 'hero-card rounded-2xl';
   card.onclick = () => openModal(i);
   card.innerHTML = `
     <div class="hero-img relative h-48 bg-gradient-to-br ${hero.color} flex items-center justify-center overflow-hidden">
@@ -596,7 +596,7 @@ function openModal(index) {
     const badgeClass = `badge-${skin.type}`;
     const typeLabel = skin.type.toUpperCase();
     const card = document.createElement('div');
-    card.className = 'skin-card rounded-2xl overflow-hidden';
+    card.className = 'skin-card rounded-2xl';
     card.innerHTML = `
       <div class="video-thumb h-48 relative flex items-center justify-center">
       <img src="${skin.image}" class="absolute inset-0 w-full h-full object-cover"/>
