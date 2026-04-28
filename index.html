@@ -457,7 +457,7 @@ name: 'Miya',
 role: 'Marksman • Moonlight Archer',
 emoji: '🏹',
 color: 'from-blue-500 to-purple-600',
-image: 'images/heroes/miya.jpg',
+image: 'images/miya.jpg',
 skins: [
 {
 name: 'Modena Butterfly',
@@ -595,7 +595,7 @@ heroes.forEach((hero, i) => {
   card.className = 'hero-card rounded-2xl';
   card.onclick = () => openModal(i);
   card.innerHTML = `
-    <div class="hero-img relative h-48 flex items-center justify-center overflow-hidden">
+<div class="hero-img relative h-48 flex items-center justify-center overflow-hidden">
 
 <img src="${hero.image}" class="absolute inset-0 w-full h-full object-cover"/>
 
