@@ -595,11 +595,11 @@ heroes.forEach((hero, i) => {
   card.className = 'hero-card rounded-2xl';
   card.onclick = () => openModal(i);
   card.innerHTML = `
-    <div class="hero-img relative h-48 bg-gradient-to-br ${hero.color} flex items-center justify-center overflow-hidden">
+    <div class="hero-img relative h-48 flex items-center justify-center overflow-hidden">
 
 <img src="${hero.image}" class="absolute inset-0 w-full h-full object-cover"/>
 
-<div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 30%, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
 <div class="text-7xl filter drop-shadow-lg relative z-10">${hero.emoji}</div>
 
