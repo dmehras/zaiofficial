@@ -154,7 +154,7 @@ color: white;
   }
   .skin-card:hover .play-btn {
     background: rgba(0,255,255,0.3);
-    transform: scale(1.1);
+    transform: scale(1.02);
     box-shadow: 0 0 25px #00ffff;
   }
 
@@ -686,10 +686,14 @@ function openModal(index) {
     const badgeClass = `badge-${skin.type}`;
     const typeLabel = skin.type.toUpperCase();
     const card = document.createElement('div');
-    card.className = 'skin-card rounded-2xl';
+    card.className = 'skin-card rounded-2xl will-change-transform';
     card.innerHTML = `
       <div class="video-thumb h-48 relative flex items-center justify-center">
-      <img src="${skin.image}" class="absolute inset-0 w-full h-full object-cover"/>
+      <img 
+src="${skin.image}" 
+loading="lazy"
+class="w-full h-full object-cover will-change-transform"
+/>
                 <div class="absolute inset-0 flex items-center justify-center">
           <div class="play-btn">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#00ffff"><path d="M8 5v14l11-7z"/></svg>
