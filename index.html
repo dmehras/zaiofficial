@@ -352,6 +352,29 @@ animation: glowPulse 2s infinite;
   </div>
 </section>
 
+<!-- WALLPAPERS -->
+<section id="wallpapers" class="py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-12">
+      <div class="text-cyan-400 font-bold tracking-[0.4em] text-sm mb-2">
+        // SELECT YOUR WALLPAPER //
+      </div>
+
+      <h2 class="font-display text-5xl md:text-6xl font-black gradient-text mb-4">
+        4K WALLPAPERS
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Click any wallpaper to view full 4K wallpaper and download instantly
+      </p>
+    </div>
+
+    <div id="wallpaperGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5"></div>
+
+  </div>
+</section>
+
 <!-- STREAM TEMPLATES -->
 <section id="streams" class="py-20 px-6 bg-black/40">
   <div class="max-w-7xl mx-auto">
@@ -677,7 +700,28 @@ skins: [
     ]
   }
 ];
-
+const wallpapers = [
+  {
+    name: 'Alucard Cosmic Wallpaper',
+    image: 'images/wallpapers/alucard.jpg'
+  },
+  {
+    name: 'Hanabi Scarlet Wallpaper',
+    image: 'images/wallpapers/hanabi.jpg'
+  },
+  {
+    name: 'Gusion Night Owl Wallpaper',
+    image: 'images/wallpapers/gusion.jpg'
+  },
+  {
+    name: 'Fanny Skylark Wallpaper',
+    image: 'images/wallpapers/fanny.jpg'
+  },
+  {
+    name: 'Layla Aspirants Wallpaper',
+    image: 'images/wallpapers/layla.jpg'
+  }
+];
 const grid = document.getElementById('heroGrid');
 heroes.forEach((hero, i) => {
   const card = document.createElement('div');
@@ -704,7 +748,77 @@ heroes.forEach((hero, i) => {
   `;
   grid.appendChild(card);
 });
+const wallpapers = [
+  {
+    name: 'Alucard Cosmic',
+    image: 'images/wallpapers/alucard.jpg'
+  },
+  {
+    name: 'Hanabi Scarlet',
+    image: 'images/wallpapers/hanabi.jpg'
+  },
+  {
+    name: 'Gusion Night Owl',
+    image: 'images/wallpapers/gusion.jpg'
+  },
+  {
+    name: 'Fanny Skylark',
+    image: 'images/wallpapers/fanny.jpg'
+  },
+  {
+    name: 'Layla Aspirants',
+    image: 'images/wallpapers/layla.jpg'
+  }
+];
 
+const wallpaperGrid = document.getElementById('wallpaperGrid');
+
+if (wallpaperGrid) {
+  wallpapers.forEach((wallpaper) => {
+    const card = document.createElement('div');
+
+    card.className = 'hero-card rounded-2xl';
+
+    card.innerHTML = `
+      <div class="hero-img relative h-48 flex items-center justify-center overflow-hidden">
+
+        <img src="${wallpaper.image}"
+             class="absolute inset-0 w-full h-full object-cover brightness-110 contrast-110"/>
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
+
+        <div class="absolute top-2 right-2">
+          <span class="reso-badge">4K</span>
+        </div>
+
+      </div>
+
+      <div class="p-4">
+        <h3 class="font-display text-xl font-bold mb-1">
+          ${wallpaper.name}
+        </h3>
+
+        <p class="text-xs text-gray-400 mb-3">
+          Ultra HD Wallpaper
+        </p>
+
+        <div class="flex justify-between items-center">
+          <span class="text-xs text-cyan-400 font-bold">
+            WALLPAPER
+          </span>
+
+          <a href="${wallpaper.image}"
+             download
+             class="text-xs text-pink-400">
+             DOWNLOAD →
+          </a>
+        </div>
+      </div>
+    `;
+
+    wallpaperGrid.appendChild(card);
+  });
+}
 const modal = document.getElementById('modal');
 const modalHeroName = document.getElementById('modalHeroName');
 const modalHeroRole = document.getElementById('modalHeroRole');
