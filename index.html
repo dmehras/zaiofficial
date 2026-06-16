@@ -358,15 +358,15 @@ animation: glowPulse 2s infinite;
 
     <div class="text-center mb-12">
       <div class="text-cyan-400 font-bold tracking-[0.4em] text-sm mb-2">
-        // SELECT YOUR WALLPAPER //
+        // SELECT YOUR THUMBNAIL //
       </div>
 
       <h2 class="font-display text-5xl md:text-6xl font-black gradient-text mb-4">
-        4K WALLPAPERS
+        PREMIUM YT THUMBNAILS
       </h2>
 
       <p class="text-gray-400 max-w-2xl mx-auto">
-        Click any wallpaper to view full 4K wallpaper and download instantly
+        Click any thumbnail to preview. After payment, send screenshot to my email and receive the thumbnail pack.
       </p>
     </div>
 
@@ -702,24 +702,19 @@ skins: [
 ];
 const wallpapers = [
   {
-    name: 'Alucard Cosmic',
-    image: 'images/alucard2.jpg'
+    name: 'MLBB Hanabi Thumbnail',
+    image: 'images/thumbnail1.jpg',
+    price: 49
   },
   {
-    name: 'Hanabi Scarlet',
-    image: 'images/hanabi2.jpg'
+    name: 'MLBB Alucard Thumbnail',
+    image: 'images/thumbnail2.jpg',
+    price: 79
   },
   {
-    name: 'Gusion Night Owl',
-    image: 'images/gusion2.jpg'
-  },
-  {
-    name: 'Fanny Skylark',
-    image: 'images/fanny2.jpg'
-  },
-  {
-    name: 'Layla Aspirants',
-    image: 'images/layla2.jpg'
+    name: 'MLBB Lunox Thumbnail',
+    image: 'images/thumbnail3.jpg',
+    price: 99
   }
 ];
 const grid = document.getElementById('heroGrid');
@@ -774,27 +769,27 @@ card.onclick = () => openWallpaper(wallpaper);
       </div>
 
       <div class="p-4">
-        <h3 class="font-display text-xl font-bold mb-1">
-          ${wallpaper.name}
-        </h3>
 
-        <p class="text-xs text-gray-400 mb-3">
-          Ultra HD Wallpaper
-        </p>
+  <h3 class="font-display text-xl font-bold mb-1">
+    ${wallpaper.name}
+  </h3>
 
-        <div class="flex justify-between items-center">
-          <span class="text-xs text-cyan-400 font-bold">
-            WALLPAPER
-          </span>
+  <p class="text-xs text-gray-400 mb-3">
+    Premium YouTube Thumbnail
+  </p>
 
-          <a href="${wallpaper.image}"
-             download
-             class="text-xs text-pink-400">
-             DOWNLOAD →
-          </a>
-        </div>
-      </div>
-    `;
+  <div class="flex justify-between items-center mt-3">
+    <span class="text-cyan-400 font-bold">
+      ₹${wallpaper.price}
+    </span>
+
+    <span class="text-pink-400">
+      BUY →
+    </span>
+  </div>
+
+</div>
+`;
 
     wallpaperGrid.appendChild(card);
   });
