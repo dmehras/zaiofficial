@@ -960,12 +960,12 @@ Your thumbnail will be customized with your image and delivered within 1 hour.
 <form
 action="https://formsubmit.co/el/botavi"
 method="POST"
-enctype="multipart/form-data"
 class="space-y-4">
 
 <input type="hidden" name="_subject" value="New ZAI OFFICIAL Thumbnail Order">
-
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
 <input
 type="text"
 name="Customer Name"
@@ -980,28 +980,38 @@ placeholder="Your Email"
 required
 class="w-full p-3 rounded-lg bg-black/40 border border-cyan-500/30">
 
-<input
-type="file"
-name="Customer Photo"
-required
-class="w-full">
-
-<input
-type="file"
-name="Payment Screenshot"
-required
-class="w-full">
-
 <textarea
 name="Order Details"
-placeholder="Hero Name, Text for Thumbnail, Other Requests..."
+placeholder="Hero Name, Thumbnail Name, Text for Thumbnail, Other Requests..."
 rows="4"
+required
 class="w-full p-3 rounded-lg bg-black/40 border border-cyan-500/30"></textarea>
 
-<input
-type="hidden"
-name="_subject"
-value="New MLBB Thumbnail Order">
+<div class="bg-black/30 border border-cyan-500/20 rounded-lg p-4">
+  <p class="text-cyan-400 font-bold mb-2">
+    PAYMENT DETAILS
+  </p>
+
+  <p class="text-white">
+    Price: ₹119
+  </p>
+
+  <p class="text-white">
+    UPI ID: <span class="text-cyan-400">darthquincy@kotak</span>
+  </p>
+
+  <p class="text-gray-400 text-sm mt-2">
+    After payment, send your payment screenshot and your photo to:
+  </p>
+
+  <p class="text-pink-400 font-bold">
+    quincydarth07@gmail.com
+  </p>
+
+  <p class="text-gray-400 text-sm mt-2">
+    Your custom thumbnail will be delivered within 1 hour.
+  </p>
+</div>
 
 <button
 type="submit"
@@ -1013,7 +1023,7 @@ SUBMIT ORDER
 
 </div>
 
-  </div>
+</div>
 
 </div>
 
