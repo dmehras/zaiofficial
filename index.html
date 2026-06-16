@@ -930,20 +930,86 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     </button>
 
     <img
-      id="wallpaperPreview"
-      src=""
-      class="w-full rounded-2xl border border-cyan-500/30"
-    />
+  id="wallpaperPreview"
+  src=""
+  class="w-full max-h-[500px] object-contain rounded-2xl border border-cyan-500/30"
+/>
 
-    <div class="text-center mt-4">
-      <a
-        id="wallpaperDownload"
-        href=""
-        download
-        class="px-6 py-3 bg-cyan-500 text-black font-bold rounded-xl">
-        DOWNLOAD 4K WALLPAPER
-      </a>
-    </div>
+    <div class="bg-black/40 rounded-xl p-6 mt-4">
+
+<h3 class="text-2xl font-bold text-cyan-400 mb-4">
+ORDER THIS THUMBNAIL
+</h3>
+
+<p class="mb-2">
+Price:
+<span class="text-pink-400 font-bold">₹119</span>
+</p>
+
+<p class="mb-4">
+UPI ID:
+<span class="text-cyan-400 font-bold">
+darthquincy@kotak
+</span>
+</p>
+
+<p class="text-gray-300 mb-6">
+Upload your payment screenshot and your photo.
+Your thumbnail will be customized with your image and delivered within 1 hour.
+</p>
+
+<form
+action="https://formsubmit.co/quincydarth07@gmail.com"
+method="POST"
+enctype="multipart/form-data"
+class="space-y-4">
+
+<input
+type="text"
+name="Customer Name"
+placeholder="Your Name"
+required
+class="w-full p-3 rounded-lg bg-black/40 border border-cyan-500/30">
+
+<input
+type="email"
+name="Customer Email"
+placeholder="Your Email"
+required
+class="w-full p-3 rounded-lg bg-black/40 border border-cyan-500/30">
+
+<input
+type="file"
+name="Customer Photo"
+required
+class="w-full">
+
+<input
+type="file"
+name="Payment Screenshot"
+required
+class="w-full">
+
+<textarea
+name="Order Details"
+placeholder="Hero Name, Text for Thumbnail, Other Requests..."
+rows="4"
+class="w-full p-3 rounded-lg bg-black/40 border border-cyan-500/30"></textarea>
+
+<input
+type="hidden"
+name="_subject"
+value="New MLBB Thumbnail Order">
+
+<button
+type="submit"
+class="w-full bg-cyan-500 text-black font-bold py-3 rounded-xl">
+SUBMIT ORDER
+</button>
+
+</form>
+
+</div>
 
   </div>
 
