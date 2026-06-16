@@ -753,9 +753,11 @@ const wallpaperGrid = document.getElementById('wallpaperGrid');
 
 if (wallpaperGrid) {
   wallpapers.forEach((wallpaper) => {
-    const card = document.createElement('div');
+   const card = document.createElement('div');
 
-    card.className = 'hero-card rounded-2xl';
+card.className = 'hero-card rounded-2xl';
+
+card.onclick = () => openWallpaper(wallpaper);
 
     card.innerHTML = `
       <div class="hero-img relative h-48 flex items-center justify-center overflow-hidden">
@@ -796,6 +798,16 @@ if (wallpaperGrid) {
 
     wallpaperGrid.appendChild(card);
   });
+}
+ function openWallpaper(wallpaper) {
+  document.getElementById('wallpaperPreview').src = wallpaper.image;
+  document.getElementById('wallpaperDownload').href = wallpaper.image;
+
+  document.getElementById('wallpaperModal').classList.remove('hidden');
+}
+
+function closeWallpaper() {
+  document.getElementById('wallpaperModal').classList.add('hidden');
 }
 const modal = document.getElementById('modal');
 const modalHeroName = document.getElementById('modalHeroName');
@@ -911,6 +923,36 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 </script>
 
 <script src="https://gumroad.com/js/gumroad.js"></script>
+<!-- WALLPAPER MODAL -->
+<div id="wallpaperModal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-6">
+
+  <div class="relative max-w-5xl w-full">
+
+    <button
+      onclick="closeWallpaper()"
+      class="absolute top-4 right-4 text-white text-3xl z-10">
+      ✕
+    </button>
+
+    <img
+      id="wallpaperPreview"
+      src=""
+      class="w-full rounded-2xl border border-cyan-500/30"
+    />
+
+    <div class="text-center mt-4">
+      <a
+        id="wallpaperDownload"
+        href=""
+        download
+        class="px-6 py-3 bg-cyan-500 text-black font-bold rounded-xl">
+        DOWNLOAD 4K WALLPAPER
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>
